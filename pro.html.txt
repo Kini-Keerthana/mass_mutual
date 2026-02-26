@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Uplifting Rural Voices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h2 id="siteTitle"></h2>
+
+<select id="languageSelect" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="hi">??????</option>
+<option value="te">??????</option>
+<option value="ta">?????</option>
+<option value="kn">?????</option>
+<option value="mr">?????</option>
+<option value="bn">?????</option>
+<option value="gu">???????</option>
+<option value="ml">??????</option>
+</select>
+</header>
+
+<section id="home" class="page active">
+<h2 id="homeTitle"></h2>
+<button id="loginBtn" onclick="showPage('loginPage')"></button>
+<button id="registerBtn" onclick="showPage('registerPage')"></button>
+</section>
+
+<section id="registerPage" class="page">
+<h2 id="registerTitle"></h2>
+<input type="text" id="regName" placeholder="Name">
+<input type="email" id="regEmail" placeholder="Email">
+<input type="password" id="regPassword" placeholder="Password">
+<button id="registerSubmit" onclick="registerUser()"></button>
+</section>
+
+<section id="loginPage" class="page">
+<h2 id="loginTitle"></h2>
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginPassword" placeholder="Password">
+<button id="loginSubmit" onclick="loginUser()"></button>
+</section>
+
+<section id="qualification" class="page">
+<h2 id="qualificationTitle"></h2>
+<select id="qualificationSelect">
+<option value="school">School</option>
+<option value="college">College</option>
+</select>
+<button id="nextBtn" onclick="showPage('stream')"></button>
+<button id="logoutBtn" onclick="logoutUser()"></button>
+</section>
+
+<section id="stream" class="page">
+<h2 id="streamTitle"></h2>
+<select id="streamSelect">
+<option value="social">Social</option>
+<option value="financial">Financial</option>
+<option value="technology">Technology</option>
+<option value="civic">Civic</option>
+</select>
+<button id="startTestBtn" onclick="loadTest()"></button>
+</section>
+
+<section id="testSection" class="page">
+<h2 id="assessmentTitle"></h2>
+<div id="questions"></div>
+<button id="submitBtn" onclick="submitTest()"></button>
+</section>
+
+<section id="result" class="page">
+<h2 id="resultTitle"></h2>
+<div id="finalText"></div>
+<button id="dashboardBtn" onclick="showDashboard()"></button>
+</section>
+
+<section id="dashboard" class="page">
+<h2 id="dashboardTitle"></h2>
+<div id="dashboardContent"></div>
+<button id="logoutBtn2" onclick="logoutUser()"></button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
